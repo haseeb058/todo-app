@@ -1,0 +1,46 @@
+@import "styles/_breakpoints.scss";
+@import "styles/_colors.scss";
+@import "styles/_mixin.scss";
+
+.mainWrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .card_wrapper {
+    margin: 20px auto;
+    width: 450px;
+    padding: 10px;
+    @media (max-width: $xxs) {
+      width: 100%;
+    }
+    .card_header {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 47px;
+      text-align: center;
+      color: #000000;
+      padding: 10px 0;
+    }
+    .form_wrapper {
+      padding: 10px 0px;
+      .textWrapper {
+        height: 66px;
+        margin-bottom: 10px;
+        @media (max-width: $xxs) {
+          padding: 0;
+        }
+      }
+      .btn_wrapper {
+        .btnLogin {
+          width: 100%;
+          &:hover {
+            background-color: #000000d6;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}

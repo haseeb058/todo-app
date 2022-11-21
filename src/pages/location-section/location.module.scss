@@ -1,0 +1,58 @@
+@import "styles/_breakpoints.scss";
+@import "styles/_colors.scss";
+@import "styles/_mixin.scss";
+
+.mainWrapper {
+  padding: 0 90px;
+  .btnWrapper {
+    .btnAdd {
+      background-color: transparent;
+      color: #575767;
+      margin: 0;
+      padding: 0;
+      height: fit-content;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+    }
+  }
+  .incompleteWrapper,
+  .completeWrapper {
+    margin: 30px auto;
+    h3 {
+      color: #575767;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 18px;
+    }
+    .infoWrapper {
+      padding: 16px 0;
+      display: flex;
+      .checkbox {
+        height: fit-content;
+      }
+    }
+  }
+}
+
+.infoLabel,
+.completeWrapper {
+  label,
+  span {
+    display: block;
+  }
+  label {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #575767;
+  }
+  span {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #b9b9be;
+    margin-left: 20px;
+  }
+}

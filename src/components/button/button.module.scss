@@ -1,0 +1,27 @@
+@import "styles/_colors.scss";
+@import "styles/_breakpoints.scss";
+@import "styles/_mixin.scss";
+
+.btn {
+  background-color: #000000;
+  color: white;
+  text-transform: capitalize;
+  font-weight: 600;
+  height: 50px;
+  border-radius: 100px;
+  letter-spacing: 0.75px;
+  padding: 7px 14px;
+  min-width: 120px;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+  .loaderClass {
+    width: 24px;
+    height: 24px;
+  }
+}

@@ -1,0 +1,21 @@
+@import "styles/breakpoints";
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 0 50px;
+  position: relative;
+
+  @media (max-width: $sm) {
+    padding: 10px;
+  }
+
+  @media (max-width: 1400px) {
+    padding: 0px 60px;
+  }
+  @media (max-width: $md) {
+    padding: 0px 30px;
+  }
+  @media (max-width: $xs) {
+    padding: 0px 20px;
+  }
+}

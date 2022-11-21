@@ -1,0 +1,31 @@
+@import "styles/breakpoints";
+
+.layoutWrapper {
+  width: 100%;
+  position: relative;
+  aside {
+    position: fixed;
+    width: 250px;
+    top: 0;
+    background: transparent;
+    z-index: 25000;
+    transition: all 0.5s ease-in-out;
+    @media (max-width: $sm) {
+      left: -100%;
+    }
+  }
+  main {
+    margin-left: 250px;
+    height: 100vh;
+    @media (max-width: $sm) {
+      margin-left: 0;
+    }
+    .mainWrapper {
+      padding-top: 45px;
+    }
+  }
+}
+
+.sideBarOpen {
+  right: 0px !important;
+}
