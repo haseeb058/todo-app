@@ -7,7 +7,7 @@ import { privateRoutes, publicRoutes } from "./helper";
 
 const RouteProtection = () => {
   const { token } = useAppSelector((state) => state?.app);
-  console.log(token);
+
   return (
     <>
       {!token ? (

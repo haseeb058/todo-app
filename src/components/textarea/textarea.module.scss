@@ -1,0 +1,46 @@
+@import "styles/_breakpoints.scss";
+@import "styles/_colors.scss";
+@import "styles/_mixin.scss";
+
+.note {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  label {
+    margin-bottom: 1px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 14px;
+    color: #626579;
+  }
+  textarea {
+    border-radius: 4px;
+    padding: 10px 8px;
+    width: 100%;
+    margin-top: 5px;
+    background: white;
+    resize: none;
+    border: none;
+    color: black;
+    font-family: "Inter";
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 8px;
+    color: black;
+    &::placeholder {
+      color: #bdbdbd;
+    }
+  }
+}
+
+.errorMessage {
+  color: $danger;
+  font-size: 14px;
+  position: absolute;
+  display: block;
+  margin-left: 5px;
+  bottom: -22px;
+  &::first-letter {
+    text-transform: capitalize;
+  }
+}

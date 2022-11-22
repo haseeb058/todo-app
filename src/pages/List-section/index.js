@@ -1,23 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Button from "components/button";
 import Input from "components/input";
 
 import style from "./list.module.scss";
+import AddTask from "./add-task";
 
 const List = () => {
+  const [addTask, setAddTask] = useState(false);
+  const [incompleteTask, setIncompleteTask] = useState([
+    {
+      summary: "Complete the test",
+      description: "dfsddfsadfsdf",
+      time: "19:00",
+    },
+  ]);
+
   return (
     <div className={style.mainWrapper}>
       <div className={style.btnWrapper}>
-        <Button title={"+ Add new task"} className={style.btnAdd} />
+        <Button
+          title={"+ Add new task"}
+          onClick={() => setAddTask(true)}
+          className={style.btnAdd}
+        />
       </div>
       <div className={style.incompleteWrapper}>
         <h3>Incomplete</h3>
-        {incompleteTask.map(({ title, time, index }) => (
+        {incompleteTask.map(({ summary, time }, index) => (
           <div className={style.infoWrapper} key={index}>
             <Input type={"checkbox"} inputClass={style.checkbox} />
             <div className={style.infoLabel}>
-              <label>{title}</label>
+              <label>{summary}</label>
               <span>⏰ {time}</span>
             </div>
           </div>
@@ -25,8 +39,8 @@ const List = () => {
       </div>
       <div className={style.completeWrapper}>
         <h3>Completed</h3>
-        {CompleteTask.map(({ title }) => (
-          <div className={style.infoWrapper}>
+        {CompleteTask.map(({ title }, index) => (
+          <div className={style.infoWrapper} key={index}>
             <Input type={"checkbox"} inputClass={style.checkbox} />
             <div className={style.completeLabel}>
               <label>{title}</label>
@@ -34,30 +48,18 @@ const List = () => {
           </div>
         ))}
       </div>
+      {addTask && (
+        <AddTask
+          setAddTask={setAddTask}
+          setIncompleteTask={setIncompleteTask}
+          addTask={addTask}
+        />
+      )}
     </div>
   );
 };
 
 export default List;
-
-const incompleteTask = [
-  {
-    title: "Complete the test",
-    time: "19:00",
-  },
-  {
-    title: "Meeting with Jack",
-    time: "19:00",
-  },
-  {
-    title: "Buy a chocolate for Mom",
-    time: "19:00",
-  },
-  {
-    title: "Facetime with Dad",
-    time: "19:00",
-  },
-];
 
 const CompleteTask = [
   {

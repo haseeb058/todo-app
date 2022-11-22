@@ -11,7 +11,7 @@ const LocationPage = () => {
       </div>
       <div className={style.incompleteWrapper}>
         <h3>Current location</h3>
-        {incompleteTask.map(({ title, longLat, index }) => (
+        {incompleteTask.map(({ title, longLat }, index) => (
           <div className={style.infoWrapper} key={index}>
             <div className={style.infoLabel}>
               <label>📍 {title}</label>
@@ -22,7 +22,7 @@ const LocationPage = () => {
       </div>
       <div className={style.completeWrapper}>
         <h3>Previous location</h3>
-        {CompleteTask.map(({ title, longLat, index }) => (
+        {CompleteTask.map(({ title, longLat }, index) => (
           <div className={style.infoWrapper} key={index}>
             <div className={style.completeLabel}>
               <label>📍 {title}</label>
